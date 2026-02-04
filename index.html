@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Charset & Viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>Flux – WebShop | Sites modernos e profissionais</title>
+
+    <!-- Description (SEO + compartilhamento) -->
+    <meta
+      name="description"
+      content="Flux WebShop - the shop made specially for you!"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/Assets/Img/Logo.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/Assets/Img/Logo.png"
+    />
+    <link rel="apple-touch-icon" href="/Assets/Img/Logo.png" />
+
+    <!-- Open Graph (WhatsApp, Instagram, Facebook, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Flux – WebShop" />
+    <meta
+      property="og:description"
+      content="Flux WebShop - the shop made specially for you!"
+    />
+    <meta
+      property="og:image"
+      content="https://souzzaparabolica.github.io/Flux/Assets/Img/Logo.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+
+    <meta property="og:url" content="https://souzzaparabolica.github.io/Flux" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Flux – WebShop" />
+    <meta
+      name="twitter:description"
+      content="Flux WebShop - the shop made specially for you!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://souzzaparabolica.github.io/Flux/Assets/Img/Logo.png"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="relative">
+    <header
+      class="absolute z-10 absolute left-1/2 -translate-x-1/2 rounded-b-[20px] top-0 left-0 w-[90%] mx-auto flex justify-between items-center py-6 px-8 bg-[#ebebeb]"
+    >
+      <h1 class="text-4xl font-bold font-[poppins] text-[#1e1e1e]">FLUX</h1>
+      <nav>
+        <ul
+          class="flex justify-center items-center gap-8 font-[poppins] font-semibold text-[#4b4b4b] text-lg"
+        >
+          <li
+            class="hover:text-[#1e1e1e] duration-300 ease cursor-pointer relative inline-block cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-out hover:after:w-full"
+          >
+            Shop
+          </li>
+          <li
+            class="hover:text-[#1e1e1e] duration-300 ease cursor-pointer relative inline-block cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-out hover:after:w-full"
+          >
+            Blog
+          </li>
+          <li
+            class="hover:text-[#1e1e1e] duration-300 ease cursor-pointer relative inline-block cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-out hover:after:w-full"
+          >
+            Contact
+          </li>
+        </ul>
+      </nav>
+      <div class="flex justify-center items-center gap-4">
+        <div
+          class="cursor-pointer cart w-[40px] h-[40px] bg-black/10 rounded-full flex justify-center items-center"
+        >
+          <i data-lucide="shopping-cart" class="text-[#1e1e1e]"></i>
+        </div>
+        <div
+          class="cursor-pointer profile w-[40px] h-[40px] bg-black/10 rounded-full"
+        ></div>
+      </div>
+    </header>
+
+    <section class="hero min-h-screen relative">
+      <h2
+        class="text-[400px] font-bold font-[poppins] text-white/90 z-10 absolute top-[25%] left-1/2 -translate-x-1/2 whitespace-nowrap"
+      >
+        Shop
+      </h2>
+      <div
+        class="absolute bg-black/30 w-[100%] h-[100%] top-0 left-0 z-0"
+      ></div>
+      <div
+        class="absolute shadow-top w-[90%] top-[87%] left-1/2 -translate-x-1/2 bg-[#ebebeb] flex justify-between items-center px-8 py-6 rounded-t-[20px] h-[100px] z-10"
+      >
+        <p class="text-black/90 font-[poppins] font-semibold text-4xl">
+          Give All You Need
+        </p>
+
+        <div class="container w-[auto]">
+          <input
+            id="searchInput"
+            type="text"
+            name="text"
+            class="input"
+            required=""
+            placeholder="Type to search..."
+          />
+          <div class="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="ionicon"
+              viewBox="0 0 512 512"
+            >
+              <title>Search</title>
+              <path
+                d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"
+                fill="none"
+                stroke="currentColor"
+                stroke-miterlimit="10"
+                stroke-width="32"
+              ></path>
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="32"
+                d="M338.29 338.29L448 448"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="py-[5rem] bg-[#ebebeb] relative z-10 flex items-start">
+      <nav
+        class="flex flex-col justify-center items-start w-[400px] h-full bg-black"
+      ></nav>
+      <div
+        class="produtos flex flex-col justify-center items-center w-full gap-12"
+      >
+        <div class="flex justify-center items-center gap-8 2xl:w-[90%]">
+          <div
+            class="flex flex-col gap-2 relative flex-1 product"
+            data-name="airpods max"
+          >
+            <div
+              class="produto prod1 w-[300px] h-[300px] 2xl:w-full bg-white rounded-lg shadow-sm relative flex flex-col"
+            >
+              <div
+                class="absolute font-[poppins] text-sm px-4 py-2 bg-black/10 text-black/90 top-2 right-2 rounded-lg"
+              >
+                Music
+              </div>
+            </div>
+            <p class="text-xl font-[poppins] font-semibold text-black/90">
+              AirPords Max
+            </p>
+            <div class="flex gap-2 justify-between items-center">
+              <div class="flex gap-1">
+                <i data-lucide="star" class="text-yellow-400 w-5 h-5"></i>
+                <p class="text-sm font-[poppins] font-semibold text-black/60">
+                  5.0 (1.2k Reviews)
+                </p>
+              </div>
+              <p class="text-lg font-[poppins] text-black/90 font-bold">
+                $1.257,00
+              </p>
+            </div>
+            <div class="botoesProd flex gap-2 items-center justify-between">
+              <button
+                class="bg-[#d9d9d9] flex-1 px-4 py-2 rounded-[50px] font-bold border border-black/20 text-black/80"
+              >
+                Add to Chart
+              </button>
+              <button
+                class="bg-[#1e1e1e] flex-1 px-4 py-2 rounded-[50px] font-bold border border-black/20 text-white/90"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-2 relative flex-1 product"
+            data-name="jbl boombox 3"
+          >
+            <div
+              class="produto prod2 w-[300px] h-[300px] 2xl:w-full bg-white rounded-lg shadow-sm relative flex flex-col"
+            >
+              <div
+                class="absolute font-[poppins] text-sm px-4 py-2 bg-black/10 text-black/90 top-2 right-2 rounded-lg"
+              >
+                Music
+              </div>
+            </div>
+            <p class="text-xl font-[poppins] font-semibold text-black/90">
+              JBL Boombox 3
+            </p>
+            <div class="flex gap-2 justify-between items-center">
+              <div class="flex gap-1">
+                <i data-lucide="star" class="text-yellow-400 w-5 h-5"></i>
+                <p class="text-sm font-[poppins] font-semibold text-black/60">
+                  5.0 (1.2k Reviews)
+                </p>
+              </div>
+              <p class="text-lg font-[poppins] text-black/90 font-bold">
+                $553,00
+              </p>
+            </div>
+            <div class="botoesProd flex gap-2 items-center justify-between">
+              <button
+                class="bg-[#d9d9d9] flex-1 px-4 py-2 rounded-[50px] font-bold border border-black/20 text-black/80"
+              >
+                Add to Chart
+              </button>
+              <button
+                class="bg-[#1e1e1e] flex-1 px-4 py-2 rounded-[50px] font-bold border border-black/20 text-white/90"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-2 relative flex-1 product"
+            data-name="apple vision pro"
+          >
+            <div
+              class="produto prod3 w-[300px] h-[300px] 2xl:w-full bg-white rounded-lg shadow-sm relative flex flex-col"
+            >
+              <div
+                class="absolute font-[poppins] text-sm px-4 py-2 bg-black/10 text-black/90 top-2 right-2 rounded-lg"
+              >
+                Other
+              </div>
+            </div>
+            <p class="text-xl font-[poppins] font-semibold text-black/90">
+              Apple Vision Pro
+            </p>
+            <div class="flex gap-2 justify-between items-center">
+              <div class="flex gap-1">
+                <i data-lucide="star" class="text-yellow-400 w-5 h-5"></i>
+                <p class="text-sm font-[poppins] font-semibold text-black/60">
+                  5.0 (1.2k Reviews)
+                </p>
+              </div>
+              <p class="text-lg font-[poppins] text-black/90 font-bold">
+                $3.500,00
+              </p>
+            </div>
+            <div class="botoesProd flex gap-2 items-center justify-between">
+              <button
+                class="bg-[#d9d9d9] flex-1 px-4 py-2 rounded-[50px] font-bold border border-black/20 text-black/80"
+              >
+                Add to Chart
+              </button>
+              <button
+                class="bg-[#1e1e1e] flex-1 px-4 py-2 rounded-[50px] font-bold border border-black/20 text-white/90"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center gap-8 2xl:w-[90%]">
+          <div
+            class="flex flex-col gap-2 relative flex-1 product"
+            data-name="phone holder"
+          >
+            <div
+              class="produto prod4 w-[300px] h-[300px] 2xl:w-full bg-white rounded-lg shadow-sm relative flex flex-col"
+            >
+              <div
+                class="absolute font-[poppins] text-sm px-4 py-2 bg-black/10 text-black/90 top-2 right-2 rounded-lg"
+              >
+                Other
+              </div>
+            </div>
+            <p class="text-xl font-[poppins] font-semibold text-black/90">
+              Phone Holder
+            </p>
+            <div class="flex gap-2 justify-between items-center">
+              <div class="flex gap-1">
+                <i data-lucide="star" class="text-yellow-400 w-5 h-5"></i>
+                <p class="text-sm font-[poppins] font-semibold text-black/60">
+                  5.0 (1.2k Reviews)
+                </p>
+              </div>
+              <p class="text-lg font-[poppins] text-black/90 font-bold">
+                $60,00
+              </p>
+            </div>
+            <div class="botoesProd flex gap-2 items-center justify-between">
+              <button
+                class="bg-[#d9d9d9] flex-1 px-4 py-2 rounded-[50px] font-bold border border-black/20 text-black/80"
+              >
+                Add to Chart
+              </button>
+              <button
+                class="bg-[#1e1e1e] flex-1 px-4 py-2 rounded-[50px] font-bold border border-black/20 text-white/90"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-2 relative flex-1 product"
+            data-name="webcam pro"
+          >
+            <div
+              class="produto prod5 w-[300px] h-[300px] 2xl:w-full bg-white rounded-lg shadow-sm relative flex flex-col"
+            >
+              <div
+                class="absolute font-[poppins] text-sm px-4 py-2 bg-black/10 text-black/90 top-2 right-2 rounded-lg"
+              >
+                Home
+              </div>
+            </div>
+            <p class="text-xl font-[poppins] font-semibold text-black/90">
+              WebCam Pro
+            </p>
+            <div class="flex gap-2 justify-between items-center">
+              <div class="flex gap-1">
+                <i data-lucide="star" class="text-yellow-400 w-5 h-5"></i>
+                <p class="text-sm font-[poppins] font-semibold text-black/60">
+                  5.0 (1.2k Reviews)
+                </p>
+              </div>
+              <p class="text-lg font-[poppins] text-black/90 font-bold">
+                $600,00
+              </p>
+            </div>
+            <div class="botoesProd flex gap-2 items-center justify-between">
+              <button
+                class="bg-[#d9d9d9] flex-1 px-4 py-2 rounded-[50px] font-bold border border-black/20 text-black/80"
+              >
+                Add to Chart
+              </button>
+              <button
+                class="bg-[#1e1e1e] flex-1 px-4 py-2 rounded-[50px] font-bold border border-black/20 text-white/90"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-2 relative flex-1 product"
+            data-name="smart cleaner bot"
+          >
+            <div
+              class="produto prod6 w-[300px] h-[300px] 2xl:w-full bg-white rounded-lg shadow-sm relative flex flex-col"
+            >
+              <div
+                class="absolute font-[poppins] text-sm px-4 py-2 bg-black/10 text-black/90 top-2 right-2 rounded-lg"
+              >
+                Home
+              </div>
+            </div>
+            <p class="text-xl font-[poppins] font-semibold text-black/90">
+              Smart Cleaner Bot
+            </p>
+            <div class="flex gap-2 justify-between items-center">
+              <div class="flex gap-1">
+                <i data-lucide="star" class="text-yellow-400 w-5 h-5"></i>
+                <p class="text-sm font-[poppins] font-semibold text-black/60">
+                  5.0 (1.2k Reviews)
+                </p>
+              </div>
+              <p class="text-lg font-[poppins] text-black/90 font-bold">
+                $858,00
+              </p>
+            </div>
+            <div class="botoesProd flex gap-2 items-center justify-between">
+              <button
+                class="bg-[#d9d9d9] flex-1 px-4 py-2 rounded-[50px] font-bold border border-black/20 text-black/80"
+              >
+                Add to Chart
+              </button>
+              <button
+                class="bg-[#1e1e1e] flex-1 px-4 py-2 rounded-[50px] font-bold border border-black/20 text-white/90"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center w-[90%]">
+          <div
+            class="previous flex items-center gap-2 cursor-pointer hover:translate-x-[-5px] duration-300 ease-in-out delay-50"
+          >
+            <i data-lucide="move-left" class="w-6 h-6 text-black/80"></i>
+            <p class="text-black/80 font-semibold font-[poppins]">Previous</p>
+          </div>
+          <div class="flex items-center">
+            <ol class="flex items-center gap-2">
+              <li
+                class="text-black/70 text-lg cursor-pointer p-1 hover:text-black/90 hover:bg-black/10 hover:underline hover:font-bold rounded-md duration-300 ease"
+              >
+                1
+              </li>
+              <li
+                class="text-black/70 text-lg cursor-pointer p-1 hover:text-black/90 hover:bg-black/10 hover:underline hover:font-bold rounded-md duration-300 ease"
+              >
+                2
+              </li>
+              <li
+                class="text-black/70 text-lg cursor-pointer p-1 hover:text-black/90 hover:bg-black/10 hover:underline hover:font-bold rounded-md duration-300 ease"
+              >
+                3
+              </li>
+              <li
+                class="text-black/70 text-lg cursor-pointer p-1 hover:text-black/90 hover:bg-black/10 hover:underline hover:font-bold rounded-md duration-300 ease"
+              >
+                ...
+              </li>
+              <li
+                class="text-black/70 text-lg cursor-pointer p-1 hover:text-black/90 hover:bg-black/10 hover:underline hover:font-bold rounded-md duration-300 ease"
+              >
+                8
+              </li>
+              <li
+                class="text-black/70 text-lg cursor-pointer p-1 hover:text-black/90 hover:bg-black/10 hover:underline hover:font-bold rounded-md duration-300 ease"
+              >
+                9
+              </li>
+              <li
+                class="text-black/70 text-lg cursor-pointer p-1 hover:text-black/90 hover:bg-black/10 hover:underline hover:font-bold rounded-md duration-300 ease"
+              >
+                10
+              </li>
+            </ol>
+          </div>
+          <div
+            class="next flex items-center gap-2 cursor-pointer hover:translate-x-[5px] duration-300 ease-in-out delay-50"
+          >
+            <p class="text-black/80 font-semibold font-[poppins]">Next</p>
+            <i data-lucide="move-right" class="w-6 h-6 text-black/80"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+    <script src="animation.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
